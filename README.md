@@ -23,6 +23,6 @@ Initialize the `JHSlideShowView` in the `viewDidLoad` method of your controller:
     [self.slideShowView animateWithImages:images
                              showDuration:8.f
                        transitionDuration:3.f
-                                     loop:NO];
+                                     loop:YES];
 }
 ```
