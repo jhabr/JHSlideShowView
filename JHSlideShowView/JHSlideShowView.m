@@ -40,9 +40,7 @@
 
 - (void)showNextImage
 {
-    self.currentImageIndex++;
-    
-    UIImage *image = self.images[self.currentImageIndex];
+    UIImage *image = self.images[++self.currentImageIndex];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
     imageView.image = image;
     

@@ -22,9 +22,6 @@
 		E96DBA931860EFF2009EC39F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E96DBA911860EFF2009EC39F /* InfoPlist.strings */; };
 		E96DBA951860EFF2009EC39F /* JHSlideShowViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DBA941860EFF2009EC39F /* JHSlideShowViewTests.m */; };
 		E96DBAA21860F114009EC39F /* JHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DBAA11860F114009EC39F /* JHSlideShowView.m */; };
-		E96DBAA71860F901009EC39F /* image1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E96DBAA41860F901009EC39F /* image1@2x.png */; };
-		E96DBAA81860F901009EC39F /* image2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E96DBAA51860F901009EC39F /* image2@2x.png */; };
-		E96DBAA91860F901009EC39F /* image3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E96DBAA61860F901009EC39F /* image3@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +56,6 @@
 		E96DBA941860EFF2009EC39F /* JHSlideShowViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHSlideShowViewTests.m; sourceTree = "<group>"; };
 		E96DBAA01860F114009EC39F /* JHSlideShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JHSlideShowView.h; path = ../JHSlideShowView/JHSlideShowView.h; sourceTree = "<group>"; };
 		E96DBAA11860F114009EC39F /* JHSlideShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JHSlideShowView.m; path = ../JHSlideShowView/JHSlideShowView.m; sourceTree = "<group>"; };
-		E96DBAA41860F901009EC39F /* image1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image1@2x.png"; path = "images/image1@2x.png"; sourceTree = "<group>"; };
-		E96DBAA51860F901009EC39F /* image2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image2@2x.png"; path = "images/image2@2x.png"; sourceTree = "<group>"; };
-		E96DBAA61860F901009EC39F /* image3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "image3@2x.png"; path = "images/image3@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +130,6 @@
 		E96DBA701860EFF2009EC39F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E96DBAA31860F543009EC39F /* Images */,
 				E96DBA711860EFF2009EC39F /* JHSlideShowView-Info.plist */,
 				E96DBA721860EFF2009EC39F /* InfoPlist.strings */,
 				E96DBA751860EFF2009EC39F /* main.m */,
@@ -178,16 +171,6 @@
 				E96DBAA11860F114009EC39F /* JHSlideShowView.m */,
 			);
 			name = JHSlideShowView;
-			sourceTree = "<group>";
-		};
-		E96DBAA31860F543009EC39F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				E96DBAA41860F901009EC39F /* image1@2x.png */,
-				E96DBAA51860F901009EC39F /* image2@2x.png */,
-				E96DBAA61860F901009EC39F /* image3@2x.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +250,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96DBA821860EFF2009EC39F /* Images.xcassets in Resources */,
-				E96DBAA91860F901009EC39F /* image3@2x.png in Resources */,
-				E96DBAA81860F901009EC39F /* image2@2x.png in Resources */,
-				E96DBAA71860F901009EC39F /* image1@2x.png in Resources */,
 				E96DBA741860EFF2009EC39F /* InfoPlist.strings in Resources */,
 				E96DBA7D1860EFF2009EC39F /* Main.storyboard in Resources */,
 			);

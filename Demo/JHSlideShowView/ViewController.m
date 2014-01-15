@@ -24,7 +24,7 @@
                         [UIImage imageNamed:@"image3.png"]];
     
     [self.slideShowView animateWithImages:images
-                             showDuration:8.f
+                             showDuration:5.f
                        transitionDuration:3.f
                                      loop:YES];
 }
