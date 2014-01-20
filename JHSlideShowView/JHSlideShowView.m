@@ -24,7 +24,10 @@
             timer               = _timer,
             currentImageIndex   = _currentImageIndex;
 
-- (void)animateWithImages:(NSArray *)images showDuration:(float)showSeconds transitionDuration:(float)transitionSeconds loop:(BOOL)shouldLoop
+- (void)animateWithImages:(NSArray *)images
+             showDuration:(float)showSeconds
+       transitionDuration:(float)transitionSeconds
+                     loop:(BOOL)shouldLoop
 {
     self.images = images;
     self.shouldLoop = shouldLoop;
@@ -40,24 +43,24 @@
 
 - (void)showNextImage
 {
-    UIImage *image = self.images[++self.currentImageIndex];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
-    imageView.image = image;
+    UIImage *nextImage = self.images[++self.currentImageIndex];
+    UIImageView *nextImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, nextImage.size.width, nextImage.size.height)];
+    nextImageView.image = nextImage;
     
-    UIImageView *oldImageView = self.subviews.lastObject;
-    if (oldImageView)
-        imageView.alpha = 0.f;
+    UIImageView *currentImageView = self.subviews.lastObject;
+    if (currentImageView)
+        nextImageView.alpha = 0.f;
     
-    [self addSubview:imageView];
+    [self addSubview:nextImageView];
     
     [UIView animateWithDuration:self.transitionSeconds animations:^{
-        if (oldImageView) {
-            oldImageView.alpha = 0.f;
-            imageView.alpha = 1.f;
+        if (currentImageView) {
+            currentImageView.alpha = 0.f;
+            nextImageView.alpha = 1.f;
         }
     } completion:^(BOOL finished) {
-        if (finished && oldImageView)
-            [oldImageView removeFromSuperview];
+        if (finished && currentImageView)
+            [currentImageView removeFromSuperview];
     }];
     
     if (self.currentImageIndex == self.images.count - 1) {
