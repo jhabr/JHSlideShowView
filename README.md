@@ -2,6 +2,8 @@
 
 JHSlideShowView is a customizable slideshow view for iOS.
 
+![JHSlideShowView](https://dl.dropboxusercontent.com/u/2024214/slideshow_s.gif)
+
 ## Installation
 
 * Drag the `JHSlideShowView` folder into your project.
