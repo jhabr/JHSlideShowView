@@ -10,6 +10,9 @@
 
 @interface JHSlideShowView : UIView
 
-- (void)animateWithImages:(NSArray *)images showDuration:(float)showSeconds transitionDuration:(float)transitionSeconds loop:(BOOL)shouldLoop;
+- (void)animateWithImages:(NSArray *)images
+             showDuration:(NSTimeInterval)showSeconds
+       transitionDuration:(NSTimeInterval)transitionSeconds
+                     loop:(BOOL)shouldLoop;
 
 @end

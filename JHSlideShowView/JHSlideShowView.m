@@ -9,7 +9,7 @@
 #import "JHSlideShowView.h"
 
 @interface JHSlideShowView ()
-@property (nonatomic) float transitionSeconds;
+@property (nonatomic) NSTimeInterval transitionSeconds;
 @property (nonatomic, strong) NSArray *images;
 @property (nonatomic) BOOL shouldLoop;
 @property (nonatomic, strong) NSTimer *timer;
@@ -25,8 +25,8 @@
             currentImageIndex   = _currentImageIndex;
 
 - (void)animateWithImages:(NSArray *)images
-             showDuration:(float)showSeconds
-       transitionDuration:(float)transitionSeconds
+             showDuration:(NSTimeInterval)showSeconds
+       transitionDuration:(NSTimeInterval)transitionSeconds
                      loop:(BOOL)shouldLoop
 {
     self.images = images;
