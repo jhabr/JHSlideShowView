@@ -15,6 +15,8 @@ JHSlideShowView is a customizable slideshow view for iOS.
 Initialize the `JHSlideShowView` in the `viewDidLoad` method of your controller:
 
 ```objective-c
+#import "JHSlideShowView.h"
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
