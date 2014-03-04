@@ -7,10 +7,10 @@ JHSlideShowView is a customizable slideshow view for iOS.
 ## Installation
 
 ### From CocoaPods
-* Add pod 'JHSlideShowView' to your Podfile.
+Add pod 'JHSlideShowView' to your Podfile.
 
 ### Manual
-* Drag the `JHSlideShowView` folder into your project.
+Drag the `JHSlideShowView` folder into your project.
 
 ## Usage
 
