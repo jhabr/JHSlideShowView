@@ -4,7 +4,7 @@
 ![Pod License](https://img.shields.io/cocoapods/l/JHSlideShowView.svg?style=flat)
 ![Pod Platform](https://img.shields.io/cocoapods/p/JHSlideShowView.svg?style=flat)
 
-JHSlideShowView is a customizable slideshow view for iOS.
+`JHSlideShowView` is a customizable slideshow view for iOS.
 
 ![JHSlideShowView](/Assets/slideshow_s.gif)
 
