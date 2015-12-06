@@ -3,7 +3,7 @@
 ![Pod Version](https://img.shields.io/cocoapods/v/JHSlideShowView.svg?style=flat)
 ![Pod Platform](https://img.shields.io/badge/platform-ios-green.svg?style=flat)
 ![Language](https://img.shields.io/badge/language-objective--c-brightgreen.svg?style=flat)
-![Pod License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)
+![Pod License](https://img.shields.io/cocoapods/l/JHSlideShowView.svg?style=flat)
 
 `JHSlideShowView` is a customizable slideshow view for iOS.
 
