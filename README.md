@@ -50,7 +50,7 @@ Initialize the `JHSlideShowView` in the `viewDidLoad` method of your controller:
 }
 ```
 
-If you're using Swift, don't forget to add an [Objctive-C bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID122) to your project's ``build settings``.
+If you're using Swift, don't forget to add an [Objective-C bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID122) to your project's ``build settings``.
 
 ###### Swift
 ```swift
