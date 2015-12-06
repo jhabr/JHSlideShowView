@@ -10,7 +10,7 @@
 
 ## Installation
 
-### From CocoaPods
+### CocoaPods
 Add the following line to your [Podfile](http://guides.cocoapods.org/using/using-cocoapods.html):
 
 ```ruby
