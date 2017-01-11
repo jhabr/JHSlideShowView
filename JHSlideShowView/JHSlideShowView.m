@@ -29,16 +29,26 @@
        transitionDuration:(NSTimeInterval)transitionSeconds
                      loop:(BOOL)shouldLoop
 {
-    self.images = images;
-    self.shouldLoop = shouldLoop;
-    self.currentImageIndex = -1;
-    self.transitionSeconds = transitionSeconds;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:showSeconds
-                                                  target:self
-                                                selector:@selector(showNextImage)
-                                                userInfo:nil
-                                                 repeats:YES];
-    [self.timer fire];
+    //stop any running one
+    [self.timer invalidate];
+    
+    if(images.count) {
+        self.images = images;
+        self.shouldLoop = shouldLoop;
+        self.currentImageIndex = -1;
+        self.transitionSeconds = transitionSeconds;
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:showSeconds
+                                                      target:self
+                                                    selector:@selector(showNextImage)
+                                                    userInfo:nil
+                                                     repeats:YES];
+        [self.timer fire];
+    }
+    else {
+        UIImageView *currentImageView = self.subviews.lastObject;
+        if (currentImageView)
+            currentImageView.image = nil;
+    }
 }
 
 - (void)showNextImage
