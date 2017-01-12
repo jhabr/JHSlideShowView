@@ -29,14 +29,14 @@
        transitionDuration:(NSTimeInterval)transitionSeconds
                      loop:(BOOL)shouldLoop
 {
-    //stop any running one
     [self.timer invalidate];
     
+    self.images = images;
+    self.shouldLoop = shouldLoop;
+    self.currentImageIndex = -1;
+    self.transitionSeconds = transitionSeconds;
+    
     if(images.count) {
-        self.images = images;
-        self.shouldLoop = shouldLoop;
-        self.currentImageIndex = -1;
-        self.transitionSeconds = transitionSeconds;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:showSeconds
                                                       target:self
                                                     selector:@selector(showNextImage)
@@ -46,21 +46,33 @@
     }
     else {
         UIImageView *currentImageView = self.subviews.lastObject;
-        if (currentImageView)
-            currentImageView.image = nil;
+        currentImageView.image = nil;
     }
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self.subviews.lastObject setFrame:self.bounds];
+}
+- (void)setContentMode:(UIViewContentMode)contentMode
+{
+    [self.subviews.lastObject setContentMode:contentMode];
+    [super setContentMode:contentMode];
 }
 
 - (void)showNextImage
 {
-    UIImage *nextImage = self.images[++self.currentImageIndex];
-    UIImageView *nextImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, nextImage.size.width, nextImage.size.height)];
-    nextImageView.image = nextImage;
-    
+    UIImageView *nextImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    nextImageView.contentMode = self.contentMode;
     UIImageView *currentImageView = self.subviews.lastObject;
-    if (currentImageView)
-        nextImageView.alpha = 0.f;
     
+    UIImage *nextImage = self.images[++self.currentImageIndex];
+    nextImageView.image = nextImage;
+
+    if (currentImageView) {
+        nextImageView.alpha = 0.f;
+    }
     [self addSubview:nextImageView];
     
     [UIView animateWithDuration:self.transitionSeconds animations:^{
@@ -69,15 +81,18 @@
             nextImageView.alpha = 1.f;
         }
     } completion:^(BOOL finished) {
-        if (finished && currentImageView)
+        if (finished && currentImageView) {
             [currentImageView removeFromSuperview];
+        }
     }];
     
     if (self.currentImageIndex == self.images.count - 1) {
-        if (self.shouldLoop)
+        if (self.shouldLoop) {
             self.currentImageIndex = -1;
-        else
+        }
+        else {
             [self.timer invalidate];
+        }
     }
 }
 
